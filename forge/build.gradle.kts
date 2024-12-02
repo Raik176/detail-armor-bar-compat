@@ -46,19 +46,18 @@ configurations {
 
 repositories {
     maven("https://maven.minecraftforge.net")
+    maven("https://cursemaven.com")
 }
 
 dependencies {
     minecraft("com.mojang:minecraft:$minecraft")
     mappings(loom.officialMojangMappings())
     "forge"("net.minecraftforge:forge:$minecraft-${common.mod.dep("forge_loader")}")
-    "io.github.llamalad7:mixinextras-forge:${mod.dep("mixin_extras")}".let {
-        implementation(it)
-        include(it)
-    }
 
     commonBundle(project(common.path, "namedElements")) { isTransitive = false }
     shadowBundle(project(common.path, "transformProductionForge")) { isTransitive = false }
+
+    implementation("curse.maven:detail-armor-bar-forge-520755:${common.mod.dep("detailab_forge")}")
 }
 
 loom {
@@ -68,15 +67,9 @@ loom {
         }
     }
 
-    forge.convertAccessWideners = true
-    forge.mixinConfigs(
-        "${mod.id}-common.mixins.json"
-    )
-
     runConfigs.all {
         isIdeConfigGenerated = false
         runDir = "../../../run"
-        vmArgs("-Dmixin.debug.export=true")
     }
 }
 
@@ -93,7 +86,6 @@ tasks.jar {
 }
 
 tasks.remapJar {
-    injectAccessWidener = true
     input = tasks.shadowJar.get().archiveFile
     archiveClassifier = null
     dependsOn(tasks.shadowJar)

@@ -42,13 +42,20 @@ configurations {
     get("developmentFabric").extendsFrom(commonBundle)
 }
 
+repositories {
+    maven("https://cursemaven.com")
+}
+
 dependencies {
     minecraft("com.mojang:minecraft:$minecraft")
     mappings(loom.officialMojangMappings())
     modImplementation("net.fabricmc:fabric-loader:${mod.dep("fabric_loader")}")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${common.mod.dep("fabric_api")}")
 
     commonBundle(project(common.path, "namedElements")) { isTransitive = false }
     shadowBundle(project(common.path, "transformProductionFabric")) { isTransitive = false }
+
+    modImplementation("curse.maven:detailab-506898:${common.mod.dep("detailab_fabric")}")
 }
 
 loom {
@@ -61,7 +68,6 @@ loom {
     runConfigs.all {
         isIdeConfigGenerated = false
         runDir = "../../../run"
-        vmArgs("-Dmixin.debug.export=true")
     }
 }
 
@@ -79,7 +85,6 @@ tasks.shadowJar {
 }
 
 tasks.remapJar {
-    injectAccessWidener = true
     input = tasks.shadowJar.get().archiveFile
     archiveClassifier = null
     dependsOn(tasks.shadowJar)
