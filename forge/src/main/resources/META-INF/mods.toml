@@ -10,3 +10,10 @@ authors = "${author}"
 description = "${description}"
 logoFile = "assets/${id}/icon.png"
 logoBlur = false
+
+[[dependencies.${id}]]
+modId = "detailab"
+mandatory = true
+versionRange = ""
+ordering = "AFTER"
+side = "CLIENT"

@@ -26,9 +26,9 @@ public class DetailArmorBarCompatCommon {
 	}
 	private static ResourceLocation id(String ns, String path) {
 		//? if >=1.21 {
-		return ResourceLocation.tryBuild(ns,path);
-		//?} else
-		/*return new ResourceLocation(ns,path);*/
+		/*return ResourceLocation.tryBuild(ns,path);
+		*///?} else
+		return new ResourceLocation(ns,path);
 	}
 
 	public static class CompatBuilder {

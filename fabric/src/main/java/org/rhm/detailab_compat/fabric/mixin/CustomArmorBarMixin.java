@@ -4,7 +4,7 @@ import com.redlimerl.detailab.api.render.CustomArmorBar;
 import org.spongepowered.asm.mixin.Mixin;
 
 //? if >=1.21
-import net.minecraft.client.gui.GuiGraphics;
+/*import net.minecraft.client.gui.GuiGraphics;*/
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.redlimerl.detailab.api.render.BarRenderManager;
 import com.redlimerl.detailab.render.InGameDrawer;
@@ -26,7 +26,7 @@ import java.util.function.Function;
 @Mixin(value = CustomArmorBar.class, priority = 1)
 public class CustomArmorBarMixin {
     //? if >=1.21 {
-    @Shadow @Final private Function<ItemStack, ? extends BarRenderManager> predicate;
+    /*@Shadow @Final private Function<ItemStack, ? extends BarRenderManager> predicate;
 
     @Inject(
             method = "draw",
@@ -57,5 +57,5 @@ public class CustomArmorBarMixin {
         }
     }
 
-    //?}
+    *///?}
 }
