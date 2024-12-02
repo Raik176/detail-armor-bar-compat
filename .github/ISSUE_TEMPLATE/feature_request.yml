@@ -10,6 +10,7 @@ body:
       label: "Mod Link"
       description: "Provide a link to the mod's website, GitHub, or download page."
       placeholder: "Paste the URL here"
+    validations:
       required: true
 
   - type: input
@@ -18,11 +19,11 @@ body:
       label: "Required Image"
       description: "URL to image of armor icons for the mod. see `src/resources/assets/detailab_compat/textures/gui/sprites/hud/` for examples."
       placeholder: "Paste the URL here"
+    validations:
       required: true
 
   - type: textarea
     id: additional_context
     attributes:
       label: "Additional Context"
-      description: "Add any other details or context about the suggested compatibility."
-      placeholder: "Include why you think this compatibility is important or any specific features to consider."
+      description: "Add any other details."
