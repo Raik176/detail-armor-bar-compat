@@ -10,19 +10,14 @@ body:
       label: "Mod Link"
       description: "Provide a link to the mod's website, GitHub, or download page."
       placeholder: "Paste the URL here"
-      validation:
-        pattern: "^(http|https)://.*$"
-        error: "Please enter a valid URL."
+      required: true
 
-  - type: file
-    id: related_image
+  - type: input
+    id: image
     attributes:
       label: "Required Image"
-      description: "Upload the armor icons for the mod. see `src/resources/assets/detailab_compat/textures/gui/sprites/hud/` for examples."
-      filetype:
-        - "image/png"
-        - "image/jpeg"
-        - "image/gif"
+      description: "URL to image of armor icons for the mod. see `src/resources/assets/detailab_compat/textures/gui/sprites/hud/` for examples."
+      placeholder: "Paste the URL here"
       required: true
 
   - type: textarea
