@@ -57,21 +57,6 @@ body:
       placeholder: "Paste a link to logs from Pastebin (https://pastebin.com) or Gist (https://gist.github.com)."
 
   - type: textarea
-    id: installed_mods
-    attributes:
-      label: "Installed Mods"
-      description: "List all installed mods or upload your mods folder contents. If using a modpack, include its name and version."
-
-  - type: textarea
-    id: environment_details
-    attributes:
-      label: "Environment Details"
-      description: "Provide information about your environment, such as:"
-      placeholder: |
-        - Operating System: [e.g., Windows 11, macOS Ventura, Ubuntu 22.04]
-        - Java Version: [e.g., Java 17]
-
-  - type: textarea
     id: additional_context
     attributes:
       label: "Additional Context"
