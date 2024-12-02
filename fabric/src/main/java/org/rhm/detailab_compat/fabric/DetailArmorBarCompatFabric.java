@@ -23,28 +23,26 @@ public class DetailArmorBarCompatFabric implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		ClientLifecycleEvents.CLIENT_STARTED.register((client) -> {
-			DetailArmorBarCompatCommon.MOD_COMPATS.forEach((itemId, texture) -> {
+			DetailArmorBarCompatCommon.MOD_COMPATS.forEach((itemId, info) -> {
 				if (itemRegistry().containsKey(itemId)) {
 					Item item = itemRegistry().get(itemId);
 					if (item instanceof ArmorItem armorItem) {
-						System.out.println(itemId);
-						System.out.println(texture);
 						DetailArmorBarAPI.customArmorBarBuilder().armor(armorItem).render((stack) -> new ArmorBarRenderManager(
-                                texture,
-                                DetailArmorBarCompatCommon.ARMOR_SIZE,
-								DetailArmorBarCompatCommon.ARMOR_SIZE,
-                                new TextureOffset(0,0),
-                                new TextureOffset(0,0),
-                                new TextureOffset(0,0),
-                                new TextureOffset(0,0)
+                                info.getLocation(),
+                                info.getSize(),
+								info.getSize(),
+                                new TextureOffset(info.getFullOffset().getKey(),info.getFullOffset().getValue()),
+                                new TextureOffset(info.getHalfOffset().getKey(),info.getHalfOffset().getValue()),
+                                new TextureOffset(info.getFullOutlineOffset().getKey(),info.getFullOutlineOffset().getValue()),
+                                new TextureOffset(info.getHalfOutlineOffset().getKey(),info.getHalfOutlineOffset().getValue())
                         )).register();
 					} else {
 						DetailArmorBarAPI.customItemBarBuilder().item(item).render((stack) -> new ItemBarRenderManager(
-								texture,
-								DetailArmorBarCompatCommon.ITEM_SIZE,
-								DetailArmorBarCompatCommon.ITEM_SIZE/2,
-								new TextureOffset(9, 0),
-								new TextureOffset(0, 0),
+								info.getLocation(),
+								info.getSize(),
+								info.getSize()/2,
+								new TextureOffset(info.getFullOffset().getKey(),info.getFullOffset().getValue()),
+								new TextureOffset(info.getFullOutlineOffset().getKey(),info.getFullOutlineOffset().getValue()),
 								true,
 								Color.WHITE
 						)).register();

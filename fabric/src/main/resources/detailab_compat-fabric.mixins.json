@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "org.rhm.detailab_compat.fabric.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "CustomArmorBarMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

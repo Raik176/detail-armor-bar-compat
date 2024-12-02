@@ -22,5 +22,8 @@
     "fabricloader": ">=0.15",
     "minecraft": "${minecraft}",
     "detailab": "*"
-  }
+  },
+  "mixins": [
+    "${id}-fabric.mixins.json"
+  ]
 }
