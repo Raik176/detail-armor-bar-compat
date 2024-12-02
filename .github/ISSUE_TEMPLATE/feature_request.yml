@@ -1,0 +1,29 @@
+---
+name: Compatibility Suggestion
+description: Suggest compatibility with another mod
+title: "[COMPAT] "
+labels: enhancement
+body:
+  - type: input
+    id: target_mod_link
+    attributes:
+      label: "Mod Link"
+      description: "Provide a link to the mod's website, GitHub, or download page."
+      placeholder: "Paste the URL here"
+    validations:
+      required: true
+
+  - type: input
+    id: image
+    attributes:
+      label: "Required Image"
+      description: "URL to image of armor icons for the mod. see `src/resources/assets/detailab_compat/textures/gui/sprites/hud/` for examples."
+      placeholder: "Paste the URL here"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional Context"
+      description: "Add any other details."
