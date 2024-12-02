@@ -9,12 +9,16 @@ body:
     attributes:
       label: "Mod Version"
       description: "Provide the version of the mod you are using (e.g., 1.2.3)."
+    validations:
+      required: true
 
   - type: input
     id: minecraft_version
     attributes:
       label: "Minecraft Version"
       description: "Specify the Minecraft version (e.g., 1.20.1)."
+    validations:
+      required: true
 
   - type: dropdown
     id: mod_loader
@@ -26,12 +30,16 @@ body:
         - "Fabric"
         - "Quilt"
         - "Other (specify in Additional Context)"
+    validations:
+      required: true
 
   - type: textarea
     id: bug_description
     attributes:
       label: "Describe the Bug"
       description: "A clear and concise description of the bug or issue."
+    validations:
+      required: true
 
   - type: textarea
     id: steps_to_reproduce
@@ -55,6 +63,8 @@ body:
       label: "Game Logs"
       description: "Include relevant logs (e.g., latest.log or debug.log)."
       placeholder: "Paste a link to logs from Pastebin (https://pastebin.com) or Gist (https://gist.github.com)."
+    validations:
+      required: true
 
   - type: textarea
     id: additional_context
