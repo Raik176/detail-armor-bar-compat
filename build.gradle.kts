@@ -3,14 +3,14 @@ import org.gradle.kotlin.dsl.version
 plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
-    id("me.modmuss50.mod-publish-plugin") version "0.7.4"
+    id("me.modmuss50.mod-publish-plugin")
 }
 
 val minecraft = stonecutter.current.version
 
-extra["githubRepo"] = "CHANGE/THIS"
-extra["modrinthId"] = "N/A"
-extra["curseforgeId"] = "N/A"
+extra["githubRepo"] = "Raik176/detail-armor-bar-compat"
+extra["modrinthId"] = "idGcORfw"
+extra["curseforgeId"] = "1152394"
 
 version = "${mod.version}+$minecraft"
 group = "${mod.group}.common"
@@ -20,7 +20,7 @@ base {
 
 architectury.common(stonecutter.tree.branches.mapNotNull {
     if (stonecutter.current.project !in it) null
-    else it.prop("loom.platform")
+    else it.project.prop("loom.platform")
 })
 
 dependencies {

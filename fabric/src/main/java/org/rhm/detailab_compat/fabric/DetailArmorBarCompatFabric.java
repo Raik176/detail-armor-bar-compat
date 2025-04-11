@@ -15,9 +15,9 @@ import org.rhm.detailab_compat.DetailArmorBarCompatCommon;
 import java.awt.*;
 
 //? if >=1.19.3 {
-/*import net.minecraft.core.registries.BuiltInRegistries;
-*///?} else
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+//?} else
+/*import net.minecraft.core.Registry;*/
 
 public class DetailArmorBarCompatFabric implements ClientModInitializer {
 	@Override
@@ -54,8 +54,8 @@ public class DetailArmorBarCompatFabric implements ClientModInitializer {
 
 	private DefaultedRegistry<Item> itemRegistry() {
 		//? if >=1.19.3 {
-		/*return BuiltInRegistries.ITEM;
-		*///?} else
-		return Registry.ITEM;
+		return BuiltInRegistries.ITEM;
+		//?} else
+		/*return Registry.ITEM;*/
 	}
 }

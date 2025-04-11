@@ -7,7 +7,7 @@ plugins {
     id("dev.architectury.loom")
     id("architectury-plugin")
     id("com.github.johnrengelman.shadow")
-    id("me.modmuss50.mod-publish-plugin") version "0.7.4"
+    id("me.modmuss50.mod-publish-plugin")
 }
 
 val loader = prop("loom.platform")!!
@@ -16,7 +16,7 @@ if (minecraft == "1.21.2") // forge only supports 1.21.3 and neoforge only suppo
     minecraft = "1.21.3"
 val common: Project = requireNotNull(stonecutter.node.sibling("")) {
     "No common project for $project"
-}
+}.project
 
 version = "${mod.version}+$minecraft"
 group = "${mod.group}.$loader"
@@ -138,11 +138,15 @@ publishMods {
         projectId = common.extra["modrinthId"].toString()
         minecraftVersions.addAll(common.mod.prop("mc_targets").split(" "))
         projectDescription = providers.fileContents(common.layout.projectDirectory.file("../../README.md")).asText.get()
+
+        requires("detail-armor-bar")
     }
     curseforge {
         accessToken = providers.environmentVariable("CF_API_KEY")
         projectId = common.extra["curseforgeId"].toString()
         minecraftVersions.addAll(common.mod.prop("mc_targets").split(" "))
+
+        requires("detail-armor-bar-forge")
     }
     github {
         accessToken = providers.environmentVariable("GITHUB_TOKEN")
