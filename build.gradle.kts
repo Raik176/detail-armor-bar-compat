@@ -45,6 +45,12 @@ java {
     sourceCompatibility = java
 }
 
+tasks.jar {
+    from(rootProject.file("LICENSE")) {
+        rename { "${mod.id}_LICENSE.md" }
+    }
+}
+
 tasks.build {
     group = "versioned"
     description = "Must run through 'chiseledBuild'"

@@ -8,7 +8,9 @@
     "${author}"
   ],
   "contact": {
-
+    "homepage": "https://rhm176.de",
+    "issues": "https://github.com/Raik176/detail-armor-bar-compat/issues",
+    "sources": "https://github.com/Raik176/detail-armor-bar-compat"
   },
   "license": "${license}",
   "icon": "assets/${id}/icon.png",
