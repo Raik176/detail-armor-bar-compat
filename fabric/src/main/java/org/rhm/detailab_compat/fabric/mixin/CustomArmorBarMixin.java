@@ -13,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 // this is not an optimal solution
 @Mixin(value = CustomArmorBar.class)
 public class CustomArmorBarMixin {
+    //? if <1.21.5 {
     @ModifyArg(method = "draw", at = @At(
             value = "INVOKE",
             target = "Lcom/redlimerl/detailab/render/InGameDrawer;drawTexture(Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/gui/GuiGraphics;IIIIIILjava/awt/Color;Z)V"
@@ -28,4 +29,5 @@ public class CustomArmorBarMixin {
     private ResourceLocation changeTextureOutline(ResourceLocation par1, @Local BarRenderManager renderInfo) {
         return renderInfo.getTexture();
     }
+    //?}
 }

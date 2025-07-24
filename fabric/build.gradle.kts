@@ -1,7 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
 import net.fabricmc.loom.task.RemapJarTask
-import org.gradle.kotlin.dsl.version
 
 plugins {
     id("dev.architectury.loom")
@@ -44,6 +43,18 @@ configurations {
 
 repositories {
     maven("https://cursemaven.com")
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = uri("https://api.modrinth.com/maven")
+            }
+        }
+        filter {
+            includeGroup("maven.modrinth")
+        }
+    }
 }
 
 dependencies {
@@ -55,7 +66,12 @@ dependencies {
     commonBundle(project(common.path, "namedElements")) { isTransitive = false }
     shadowBundle(project(common.path, "transformProductionFabric")) { isTransitive = false }
 
-    modImplementation("curse.maven:detailab-506898:${common.mod.dep("detailab_fabric")}")
+    //TODO: more stable approach?
+    if (minecraft == "1.21.5") {
+        modImplementation("maven.modrinth:detail-armor-bar-reconstructed:${common.mod.dep("detailab_fabric")}")
+    } else {
+        modImplementation("curse.maven:detailab-506898:${common.mod.dep("detailab_fabric")}")
+    }
 }
 
 loom {

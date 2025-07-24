@@ -22,8 +22,7 @@
   },
   "depends": {
     "fabricloader": ">=0.15",
-    "minecraft": "${minecraft}",
-    "detailab": "*"
+    "minecraft": "${minecraft}"
   },
   "mixins": [
     "${id}-fabric.mixins.json"
