@@ -19,7 +19,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 //?} else
 /*import net.minecraft.core.Registry;*/
 
-//? if >1.21.5 {
+//? if >=1.21.5 {
 /*import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import java.util.Optional;
