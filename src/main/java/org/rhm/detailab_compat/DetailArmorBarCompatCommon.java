@@ -13,6 +13,252 @@ public class DetailArmorBarCompatCommon {
 
 			.basicCompat("goated", "barbaric_helmet") // You've Goat to be Kidding Me!
 
+			//Mythic Metals
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "adamantite")),
+					"mythicmetals",
+					"adamantite"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "aquarium")),
+					"mythicmetals",
+					"aquarium"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "banglum")),
+					"mythicmetals",
+					"banglum"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "bronze")),
+					"mythicmetals",
+					"bronze"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "carmot")),
+					"mythicmetals",
+					"carmot"
+			)
+			.basicCompat(
+					"mythicmetals",
+					"celestium_elytra"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "celestium")),
+					"mythicmetals",
+					"celestium"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "copper")),
+					"mythicmetals",
+					"copper"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "durasteel")),
+					"mythicmetals",
+					"durasteel"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "elytra_celestium")),
+					"mythicmetals",
+					"elytra_celestium"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "hallowed")),
+					"mythicmetals",
+					"hallowed"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "kyber")),
+					"mythicmetals",
+					"kyber"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "legendary_banglum")),
+					"mythicmetals",
+					"legendary_banglum"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "metallurgium")),
+					"mythicmetals",
+					"metallurgium"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "midas_gold")),
+					"mythicmetals",
+					"midas_gold"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "mythril")),
+					"mythicmetals",
+					"mythril"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "orichalcum")),
+					"mythicmetals",
+					"orichalcum"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "osmium")),
+					"mythicmetals",
+					"osmium"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "osmium_chainmail")),
+					"mythicmetals",
+					"osmium_chainmail"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "palladium")),
+					"mythicmetals",
+					"palladium"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "prometheum")),
+					"mythicmetals",
+					"prometheum"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "runite")),
+					"mythicmetals",
+					"runite"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "silver")),
+					"mythicmetals",
+					"silver"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "star_platinum")),
+					"mythicmetals",
+					"star_platinum"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "steel")),
+					"mythicmetals",
+					"steel"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "stormyx")),
+					"mythicmetals",
+					"stormyx"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("mythicmetals", "tidesinger")),
+					"mythicmetals",
+					"tidesinger"
+			)
+
+
+			//Enderman Overhaul
+			.basicCompat("endermanoverhaul", "badlands_hood")
+			.basicCompat("endermanoverhaul", "savanna_hood")
+			.basicCompat("endermanoverhaul", "snowy_hood")
+
+			//Let's Do: Candlelight
+			.complexCompat(
+					builder -> builder.setLocation(textureId("candlelight", "culinary_set")),
+					"candlelight",
+					"cooking_hat"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("candlelight", "culinary_set")),
+					"candlelight",
+					"chefs",
+					new String[]{"jacket", "pants", "boots"}
+			)
+
+			//Let's Do: Brewery
+			.basicCompat("brewery", "brewfest_trousers")
+			.basicCompat("brewery", "brewfest_dress")
+			.basicCompat("brewery", "brewfest_blouse")
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("brewery", "brewfest_set")),
+					"brewery",
+					"brewfest",
+					new String[]{"regalia", "hat", "hat_red", "boots", "shoes"}
+			)
+
+			//Let's do: Herbal Brews
+			.basicCompat("herbalbrews", "witch_hat")
+			.basicCompat("herbalbrews", "top_hat")
+
+			//Let's Do: Vinery
+			.complexCompat(
+					builder -> builder.setLocation(textureId("vinery", "winemaker_set")),
+					"vinery",
+					"straw_hat"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("vinery", "winemaker_set")),
+					"vinery",
+					"winemaker",
+					new String[]{"apron", "leggings", "boots"}
+			)
+
+			// Let's Do: Beach Party
+			.basicCompat("beachparty", "rubber_ring_blue")
+			.basicCompat("beachparty", "rubber_ring_pink")
+			.basicCompat("beachparty", "rubber_ring_stripped")
+			.basicCompat("beachparty", "rubber_ring_axolotl")
+			.basicCompat("beachparty", "rubber_ring_pelican")
+
+			//Aquamirae
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("aquamirae", "terrible")),
+					"aquamirae",
+					"terrible"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("aquamirae", "abyssal")),
+					"aquamirae",
+					"abyssal",
+					new String[]{"heaume", "brigantine", "leggings", "boots"}
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("aquamirae", "three_bolt")),
+					"aquamirae",
+					"three_bolt",
+					new String[]{"helmet", "suit", "leggings", "boots"}
+			)
+
+			// Create Fabric
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("create", "netherite_diving_set")),
+					"create",
+					"netherite_diving"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("create", "copper_diving_set")),
+					"create",
+					"copper_diving"
+			)
+
+			// Deeper and Darker
+			.basicCompat("deeperdarker", "soul_elytra")
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("deeperdarker", "resonarium")),
+					"deeperdarker",
+					"resonarium"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("deeperdarker", "warden")),
+					"deeperdarker",
+					"warden"
+			)
+
+			// Majrusz's Progressive Difficulty
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("majruszsdifficulty", "enderium_armor")),
+					"majruszsdifficulty",
+					"enderium"
+			)
+			.complexAllEquipment(
+					builder -> builder.setLocation(textureId("majruszsdifficulty", "tattered_armor")),
+					"majruszsdifficulty",
+					"tattered"
+			)
+
 			// Better Nether
 			.complexAllEquipment(
 					builder -> builder.setLocation(textureId("betternether", "cincinnasite")),

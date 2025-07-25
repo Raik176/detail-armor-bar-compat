@@ -39,7 +39,6 @@ public class DetailArmorBarCompatFabric implements ClientModInitializer {
 					continue;
 				Item item = optionalItem.get().value();
 				*///?} else {
-				System.out.println(itemId);
 					if (!itemRegistry().containsKey(itemId))
 						continue;
 					Item item = itemRegistry().get(itemId);
