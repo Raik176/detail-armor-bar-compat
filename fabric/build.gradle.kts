@@ -154,14 +154,24 @@ publishMods {
         minecraftVersions.addAll(common.mod.prop("mc_targets").split(" "))
         projectDescription = providers.fileContents(common.layout.projectDirectory.file("../../README.md")).asText.get()
 
-        requires("detail-armor-bar", "fabric-api")
+        //TODO: more stable approach?
+        if (minecraft == "1.21.5") {
+            requires("detail-armor-bar-reconstructed")
+        } else {
+            requires("detail-armor-bar", "fabric-api")
+        }
     }
     curseforge {
         accessToken = providers.environmentVariable("CF_API_KEY")
         projectId = common.extra["curseforgeId"].toString()
         minecraftVersions.addAll(common.mod.prop("mc_targets").split(" "))
 
-        requires("detail-armor-bar", "fabric-api")
+        //TODO: more stable approach?
+        if (minecraft == "1.21.5") {
+            requires("detail-armor-bar-reconstructed")
+        } else {
+            requires("detail-armor-bar", "fabric-api")
+        }
     }
     github {
         accessToken = providers.environmentVariable("GITHUB_TOKEN")
